@@ -4,6 +4,8 @@
 *.db
 *.backup.json
 *.json
+*.user
+
 
 # Build files
 *.ilk
