@@ -1,8 +1,8 @@
 #include <iostream>
-#include <vector>
+//#include <vector>
 //#include "clsBankClient.h"
-#include "clsInputValidate.h"
-#include "clsUtilities.h"
+//#include "clsInputValidate.h"
+//#include "clsUtilities.h"
 #include "clsMainScreen.h"
 using namespace std;
 

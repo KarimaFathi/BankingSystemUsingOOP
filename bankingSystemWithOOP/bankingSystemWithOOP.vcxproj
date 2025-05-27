@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="bankingSystemWithOOP.cpp" />
     <ClCompile Include="clsBankClient.cpp" />
+    <ClCompile Include="clsClientListScreen.cpp" />
     <ClCompile Include="clsDate.cpp" />
     <ClCompile Include="clsInputValidate.cpp" />
     <ClCompile Include="clsMainScreen.cpp" />
@@ -139,6 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsBankClient.h" />
+    <ClInclude Include="clsClientListScreen.h" />
     <ClInclude Include="clsDate.h" />
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsMainScreen.h" />

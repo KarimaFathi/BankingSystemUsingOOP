@@ -2,6 +2,7 @@
 #include<iostream>
 #include "clsScreen.h"
 #include "clsInputValidate.h"
+#include "clsClientListScreen.h"
 using namespace std;
 
 
@@ -23,7 +24,9 @@ class clsMainScreen : protected clsScreen
 		showMainMenu();
 	}
 
-	static void _showAllClientsScreen() { }
+	static void _showAllClientsScreen() {
+		clsClientListScreen::showClientsList();
+	}
 	static void _showAddNewClientsScreen(){ }
 	static void _showDeleteClientScreen() { }
 	static void _showUpdateClientScreen() { }
@@ -33,7 +36,7 @@ class clsMainScreen : protected clsScreen
 	static void _showEndScreen() { }
 
 
-	static void _perfomMainMenuOptions(_enMainMenu mainMenuOption) {
+	static void _performMainMenuOptions(_enMainMenu mainMenuOption) {
 		switch (mainMenuOption) {
 		case _enMainMenu::showClients:
 			system("cls");
@@ -82,7 +85,7 @@ public:
 	static void showMainMenu() {
 		_drawScreenHeader("Main Screen");
 		cout << setw(37) << left << "" << "===========================================\n";
-		cout << setw(37) << left << "" << "\t\t\tMain Menue\n";
+		cout << setw(37) << left << "" << "\t\t\tMain Menu\n";
 		cout << setw(37) << left << "" << "===========================================\n";
 		cout << setw(37) << left << "" << "\t[1] Show Client List.\n";
 		cout << setw(37) << left << "" << "\t[2] Add New Client.\n";
@@ -93,7 +96,7 @@ public:
 		cout << setw(37) << left << "" << "\t[7] Manage Users.\n";
 		cout << setw(37) << left << "" << "\t[8] Logout.\n";
 		cout << setw(37) << left << "" << "===========================================\n";
-	   _perfomMainMenuOptions((_enMainMenu)_readMenuOption());
+	   _performMainMenuOptions((_enMainMenu)_readMenuOption());
 	}
 
 	

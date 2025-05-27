@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\BankingSystemUsingOOP\bankingSystemWithOOP\x64\Debug\bankingSystemWithOOP.exe</FullPath>
+      <FullPath>D:\BankingSystemUsingOOP\bankingSystemWithOOP\Debug\bankingSystemWithOOP.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
