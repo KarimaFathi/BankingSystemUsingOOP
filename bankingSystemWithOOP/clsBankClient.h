@@ -177,20 +177,20 @@ public:
 		return (!client.isEmpty());
 	}
 
-	void print() {
-		cout << "\nClient Card:";
-		cout << "\n___________________";
-		cout << "\nFirstName   : " << firstName;
-		cout << "\nLastName    : " << lastName;
-		cout << "\nFull Name   : " << fullName();
-		cout << "\nEmail       : " << email;
-		cout << "\nPhone       : " << phone;
-		cout << "\nAcc. Number : " << accountNumber;
-		cout << "\nPassword    : " << pinCode;
-		cout << "\nBalance     : " << accountBalance;
-		cout << "\n___________________\n";
+	//void print() {
+	//	cout << "\nClient Card:";
+	//	cout << "\n___________________";
+	//	cout << "\nFirstName   : " << firstName;
+	//	cout << "\nLastName    : " << lastName;
+	//	cout << "\nFull Name   : " << fullName();
+	//	cout << "\nEmail       : " << email;
+	//	cout << "\nPhone       : " << phone;
+	//	cout << "\nAcc. Number : " << accountNumber;
+	//	cout << "\nPassword    : " << pinCode;
+	//	cout << "\nBalance     : " << accountBalance;
+	//	cout << "\n___________________\n";
 
-	}
+	//}
 
 	enum enSaveResult {failedEmptyObject = 0, successeded = 1, failedAccountNumberExists = 2};
 
