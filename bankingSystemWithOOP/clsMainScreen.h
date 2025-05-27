@@ -5,6 +5,8 @@
 #include "clsClientListScreen.h"
 #include "clsAddNewClientScreen.h"
 #include "clsDeleteClientScreen.h"
+#include "clsUpdateClientScreen.h"
+#include "clsFindClientScreen.h"
 using namespace std;
 
 
@@ -35,8 +37,12 @@ class clsMainScreen : protected clsScreen
 	static void _showDeleteClientScreen() { 
 		clsDeleteClientScreen::showDeleteClientScreen();
 	}
-	static void _showUpdateClientScreen() { }
-	static void _ShowFindClientScreen() { }
+	static void _showUpdateClientScreen() {
+		clsUpdateClientScreen::showUpdateClientScreen();
+	}
+	static void _ShowFindClientScreen() {
+		clsFindClientScreen::showFindClient();
+	}
 	static void _showTransactionsMenu() { }
 	static void _showManageUsersMenu() {  }
 	static void _showEndScreen() { }
