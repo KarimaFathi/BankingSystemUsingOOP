@@ -139,6 +139,7 @@
     <ClCompile Include="clsPerson.cpp" />
     <ClCompile Include="clsScreen.cpp" />
     <ClCompile Include="clsString.cpp" />
+    <ClCompile Include="clsTotalBalancesScreen.cpp" />
     <ClCompile Include="clsTransactionsScreen.cpp" />
     <ClCompile Include="clsUpdateClientScreen.cpp" />
     <ClCompile Include="clsUtilities.cpp" />
@@ -157,6 +158,7 @@
     <ClInclude Include="clsPerson.h" />
     <ClInclude Include="clsScreen.h" />
     <ClInclude Include="clsString.h" />
+    <ClInclude Include="clsTotalBalancesScreen.h" />
     <ClInclude Include="clsTransactionsScreen.h" />
     <ClInclude Include="clsUpdateClientScreen.h" />
     <ClInclude Include="clsUtilities.h" />
