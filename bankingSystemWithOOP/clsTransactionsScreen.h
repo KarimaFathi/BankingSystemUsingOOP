@@ -5,6 +5,7 @@
 #include "clsScreen.h"
 #include "clsInputValidate.h"
 #include "clsDepositScreen.h"
+#include "clsWithdrawScreen.h"
 using namespace std;
 
 
@@ -29,8 +30,11 @@ private:
 	 static void  _showDepositScreen() {
 		 clsDepositScreen::showDepositScreen();
 	 }
-	 static void _showBalanceScreen() {}
-	 static void _showWithdrawScreen() {}
+	 static void _showBalanceScreen() {
+	 }
+	 static void _showWithdrawScreen() {
+		 clsWithdrawScreen::showWithdrawScreen();
+	 }
 	 static void _showMainMenu(){}
 
 	 static void _performTransactionsOptions(_enTransactionsMenu transactionOption) {

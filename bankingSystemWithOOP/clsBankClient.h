@@ -243,10 +243,23 @@ public:
 		return totalBalances;
 	}
 
-		void deposit(double amount) {
+	void deposit(double amount) {
+		accountBalance += amount;
+		save();
+	}
+
+	bool withdraw(double amount) {
+		if (amount > accountBalance) {
+			return false;
+		}
+		else {
 			accountBalance += amount;
 			save();
 		}
+		return true;
+	}
+
+
 };
 
 
