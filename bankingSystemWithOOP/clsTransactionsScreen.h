@@ -4,6 +4,7 @@
 #include "clsBankClient.h"
 #include "clsScreen.h"
 #include "clsInputValidate.h"
+#include "clsDepositScreen.h"
 using namespace std;
 
 
@@ -20,18 +21,17 @@ private:
 	}
 
 	 static void _goBackToTransactionMenu() {
-		 cout << "\n\nPress any key to go back to Main Menu...";
+		 cout << "\n\nPress any key to go back to Transactions Menu...";
 		 system("pause>0");
 		 system("cls");
 		 showTransactionsMenu();
 	 }
-	 static void  _showDepositScreen() {}
+	 static void  _showDepositScreen() {
+		 clsDepositScreen::showDepositScreen();
+	 }
 	 static void _showBalanceScreen() {}
-	static void _showWithdrawScreen() {}
-	static void _showMainMenu(){}
-
-
-
+	 static void _showWithdrawScreen() {}
+	 static void _showMainMenu(){}
 
 	 static void _performTransactionsOptions(_enTransactionsMenu transactionOption) {
 		 switch (transactionOption) {
@@ -55,6 +55,7 @@ private:
 			 _showMainMenu();
 		 }
 	}
+
 public:
 
 	static void showTransactionsMenu() {

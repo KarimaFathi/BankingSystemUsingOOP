@@ -239,9 +239,14 @@ public:
 		double totalBalances = 0;
 		for (clsBankClient& client : vBankClients) {
 			totalBalances += client.accountBalance;
-			}
-	    return totalBalances;
+		}
+		return totalBalances;
 	}
+
+		void deposit(double amount) {
+			accountBalance += amount;
+			save();
+		}
 };
 
 
