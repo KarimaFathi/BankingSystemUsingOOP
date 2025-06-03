@@ -8,6 +8,7 @@
 #include "clsUpdateClientScreen.h"
 #include "clsFindClientScreen.h"
 #include "clsTransactionsScreen.h"
+#include "clsManageUsersScreen.h"
 using namespace std;
 
 
@@ -47,7 +48,10 @@ class clsMainScreen : protected clsScreen
 	static void _showTransactionsMenu() {
 		clsTransactionsScreen::showTransactionsMenu();
 	}
-	static void _showManageUsersMenu() {  }
+	static void _showManageUsersMenu() {
+		clsManageUsersScreen::showManageUsersMenu();
+	}
+
 	static void _showEndScreen() { }
 
 

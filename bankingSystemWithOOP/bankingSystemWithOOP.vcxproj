@@ -135,13 +135,16 @@
     <ClCompile Include="clsDepositScreen.cpp" />
     <ClCompile Include="clsFindClientScreen.cpp" />
     <ClCompile Include="clsInputValidate.cpp" />
+    <ClCompile Include="clsListUserScreen.cpp" />
     <ClCompile Include="clsMainScreen.cpp" />
+    <ClCompile Include="clsManageUsersScreen.cpp" />
     <ClCompile Include="clsPerson.cpp" />
     <ClCompile Include="clsScreen.cpp" />
     <ClCompile Include="clsString.cpp" />
     <ClCompile Include="clsTotalBalancesScreen.cpp" />
     <ClCompile Include="clsTransactionsScreen.cpp" />
     <ClCompile Include="clsUpdateClientScreen.cpp" />
+    <ClCompile Include="clsUser.cpp" />
     <ClCompile Include="clsUtilities.cpp" />
     <ClCompile Include="clsWithdrawScreen.cpp" />
   </ItemGroup>
@@ -154,13 +157,16 @@
     <ClInclude Include="clsDepositScreen.h" />
     <ClInclude Include="clsFindClientScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
+    <ClInclude Include="clsListUserScreen.h" />
     <ClInclude Include="clsMainScreen.h" />
+    <ClInclude Include="clsManageUsersScreen.h" />
     <ClInclude Include="clsPerson.h" />
     <ClInclude Include="clsScreen.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="clsTotalBalancesScreen.h" />
     <ClInclude Include="clsTransactionsScreen.h" />
     <ClInclude Include="clsUpdateClientScreen.h" />
+    <ClInclude Include="clsUser.h" />
     <ClInclude Include="clsUtilities.h" />
     <ClInclude Include="clsWithdrawScreen.h" />
   </ItemGroup>

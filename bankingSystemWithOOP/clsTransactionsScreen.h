@@ -57,7 +57,6 @@ private:
 			 _goBackToTransactionMenu();
 			 break;
 		 case _enTransactionsMenu::mainMenu:
-			 system("cls");
 			 _showMainMenu();
 		 }
 	}
