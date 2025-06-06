@@ -4,6 +4,7 @@
 #include "clsInputValidate.h"
 #include "clsListUserScreen.h"
 #include "clsAddNewUserScreen.h"
+#include "clsDeleteUserScreen.h"
 
 
 class clsManageUsersScreen : protected clsScreen
@@ -22,7 +23,7 @@ private:
 		clsListUserScreen::showUsersList();
 	}
 	static void _goBackToManageUsersMenu() {
-		cout << "\n\nPress any key to go back to Manage Users Menue...";
+		cout << "\n\nPress any key to go back to Manage Users Menu...";
 		system("pause>0");
 		system("cls");
 		showManageUsersMenu();
@@ -30,7 +31,9 @@ private:
 	static void _ShowAddNewUsersScreen() {
 		clsAddNewUserScreen::showAddNewUserScreen();
 	}
-	static void _ShowDeleteNewUsersScreen() {}
+	static void _ShowDeleteNewUsersScreen() {
+		clsDeleteUserScreen::showDeleteUserScreen();
+	}
 	static void _ShowUpdateUsersScreen() {}
 	static void _ShowFindUsersScreen() {}
 	static void _showMainMenu() {}
