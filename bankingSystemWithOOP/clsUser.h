@@ -12,8 +12,9 @@ using namespace std;
 class clsUser : public clsPerson
 {
 	int _permissions;
-	float _accountBalance;
 	enum enMode { emptyMode = 0, updatedMode = 1, addMode = 2 };
+	
+
 	enMode _mode;
 	bool _isMarkedToDelete = false;
 	string _userName, _password;
@@ -191,6 +192,9 @@ public:
 	}
 
 	enum enSaveResult { failedEmptyObject = 0, successeded = 1, failedUserExists = 2 };
+	enum enPermissions { allPermissions = -1, showAllClients = 1, addNewClient = 2, deleteClients = 4, updateClients = 8, findClients = 16, manageTransactions = 32, AdministerUsers = 64 };
+
+
 
 	enSaveResult save() {
 		switch (_mode) {

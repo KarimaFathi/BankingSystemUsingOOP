@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bankingSystemWithOOP.cpp" />
+    <ClCompile Include="clsAddNewUserScreen.cpp" />
     <ClCompile Include="clsBankClient.cpp" />
     <ClCompile Include="clsClientListScreen.cpp" />
     <ClCompile Include="clsDate.cpp" />
@@ -150,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsAddNewClientScreen.h" />
+    <ClInclude Include="clsAddNewUserScreen.h" />
     <ClInclude Include="clsBankClient.h" />
     <ClInclude Include="clsClientListScreen.h" />
     <ClInclude Include="clsDate.h" />
