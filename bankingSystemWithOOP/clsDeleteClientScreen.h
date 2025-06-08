@@ -26,6 +26,10 @@ private:
     }
 public:
     static void showDeleteClientScreen() {
+        if (!checkAccessRights(clsUser::enPermissions::deleteClients))
+        {
+            return;// this will exit the function and it will not continue
+        }
         string title = "Delete Client Screen";
         _drawScreenHeader(title);
         string accountNumber = "";

@@ -22,6 +22,10 @@ private:
 
 public:
 	static void showClientsList() {
+        if (!checkAccessRights(clsUser::enPermissions::showAllClients))
+        {
+            return;// this will exit the function and it will not continue
+        }
 		string title = "Client List Screen";
         vector<clsBankClient> vBankClients = clsBankClient::getClientsList();
         string subtitle = "(" + to_string(vBankClients.size()) + ") Clients ";

@@ -47,6 +47,10 @@ private:
 
 public:
 	static void showAddNewClientScreen() {
+        if (!checkAccessRights(clsUser::enPermissions::addNewClient))
+        {
+            return;// this will exit the function and it will not continue
+        }
 		string title = "Add New Client Screen";
 		_drawScreenHeader(title);
         string accountNumber = "";

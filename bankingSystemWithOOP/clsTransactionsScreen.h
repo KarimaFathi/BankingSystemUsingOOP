@@ -65,6 +65,11 @@ public:
 
 	static void showTransactionsMenu() {
 
+		if (!checkAccessRights(clsUser::enPermissions::manageTransactions))
+		{
+			return;// this will exit the function and it will not continue
+		}
+
 		_drawScreenHeader("Transactions Screen");
 		cout << setw(37) << left << "" << "=========================================================\n";
 		cout << setw(37) << left << "" << "\t\tTransactions Menu Screen\n";

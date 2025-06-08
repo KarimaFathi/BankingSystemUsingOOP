@@ -81,6 +81,11 @@ public:
 
 	static void showManageUsersMenu() {
 
+		if (!checkAccessRights(clsUser::enPermissions::AdministerUsers))
+		{
+			return;// this will exit the function and it will not continue
+		}
+
 		_drawScreenHeader("Transactions Screen");
 		cout << setw(37) << left << "" << "=========================================================\n";
 		cout << setw(37) << left << "" << "\t\tManage Users Menu Screen\n";
