@@ -139,6 +139,7 @@
     <ClCompile Include="clsFindUserScreen.cpp" />
     <ClCompile Include="clsInputValidate.cpp" />
     <ClCompile Include="clsListUserScreen.cpp" />
+    <ClCompile Include="clsLoginScreen.cpp" />
     <ClCompile Include="clsMainScreen.cpp" />
     <ClCompile Include="clsManageUsersScreen.cpp" />
     <ClCompile Include="clsPerson.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="clsUser.cpp" />
     <ClCompile Include="clsUtilities.cpp" />
     <ClCompile Include="clsWithdrawScreen.cpp" />
+    <ClCompile Include="global.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="clsAddNewClientScreen.h" />
@@ -165,6 +167,7 @@
     <ClInclude Include="clsFindUserScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
     <ClInclude Include="clsListUserScreen.h" />
+    <ClInclude Include="clsLoginScreen.h" />
     <ClInclude Include="clsMainScreen.h" />
     <ClInclude Include="clsManageUsersScreen.h" />
     <ClInclude Include="clsPerson.h" />
@@ -177,6 +180,7 @@
     <ClInclude Include="clsUser.h" />
     <ClInclude Include="clsUtilities.h" />
     <ClInclude Include="clsWithdrawScreen.h" />
+    <ClInclude Include="global.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
