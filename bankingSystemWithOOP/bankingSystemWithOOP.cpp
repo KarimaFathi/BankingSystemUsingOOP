@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
-    clsLoginScreen::showLoginScreen();
+    while (true) {
+        clsLoginScreen::showLoginScreen();
+    }
 }
 
