@@ -5,6 +5,7 @@
 #include "clsListUserScreen.h"
 #include "clsAddNewUserScreen.h"
 #include "clsDeleteUserScreen.h"
+#include "clsUpdateUserScreen.h"
 
 
 class clsManageUsersScreen : protected clsScreen
@@ -34,7 +35,9 @@ private:
 	static void _ShowDeleteNewUsersScreen() {
 		clsDeleteUserScreen::showDeleteUserScreen();
 	}
-	static void _ShowUpdateUsersScreen() {}
+	static void _ShowUpdateUsersScreen() {
+		clsUpdateUserScreen::showUpdateUserScreen();
+	}
 	static void _ShowFindUsersScreen() {}
 	static void _showMainMenu() {}
 
