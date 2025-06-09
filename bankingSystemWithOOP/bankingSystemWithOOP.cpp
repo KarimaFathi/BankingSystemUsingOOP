@@ -5,7 +5,9 @@ using namespace std;
 int main()
 {
     while (true) {
-        clsLoginScreen::showLoginScreen();
+        if (clsLoginScreen::showLoginScreen() == false) {
+            break;
+        }
     }
 }
 
