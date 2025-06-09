@@ -5,9 +5,13 @@
 #include "global.h"
 
 
+
 class clsLoginScreen : protected clsScreen
 {
 private:
+
+	
+
 	static bool _login() {
 		bool failedLogin = false;
 		string userName, password;
@@ -29,9 +33,12 @@ private:
 			currentUser = clsUser::find(userName, password);
 			failedLogin = currentUser.isEmpty();
 		} while (failedLogin);
+		currentUser.registerLogin();
 		clsMainScreen::showMainMenu();
 		return true;
 	}
+
+
 
 
 public:

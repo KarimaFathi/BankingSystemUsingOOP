@@ -3,6 +3,7 @@
 #include<iostream>
 #include<iomanip>
 #include<string>
+#include <chrono>
 #include "clsString.h"
 using namespace std;
 
@@ -78,6 +79,34 @@ public:
 		date._month = stoi(vec[1]);
 		date._year = stoi(vec[2]);
 		return date;
+	}
+
+	static string getCurrentDateTimeString() {
+
+		int year, month, day, hour, minute, second;
+		// Get current time as time_point
+		auto now = std::chrono::system_clock::now();
+
+		// Convert to time_t for easy formatting
+		std::time_t now_time = std::chrono::system_clock::to_time_t(now);
+
+		// Convert to tm structure (local time)
+		std::tm* local_time = std::localtime(&now_time);
+
+		year = 1900 + local_time->tm_year;
+		month = 1 + local_time->tm_mon;
+		day = local_time->tm_mday;
+		hour = local_time->tm_hour;
+		minute = local_time->tm_min;
+		second = local_time->tm_sec;
+		
+
+		return std::to_string(day) + "/" +
+			std::to_string(month) + "/" +
+			std::to_string(year) + " - " +
+			std::to_string(hour) + ":" +
+			std::to_string(minute) + ":" +
+			std::to_string(second);
 	}
 
 	void Print() {

@@ -5,6 +5,7 @@
 #include<string>
 #include "clsPerson.h"
 #include "clsString.h"
+#include "clsDate.h"
 using namespace std;
 
 
@@ -106,6 +107,14 @@ class clsUser : public clsPerson
 		return _addDataLineToFile(_convertUserObjectToLine(*this));
 	}
 
+	 string _convertLoginDataToLine(string separator = "#//#") {
+		string line;
+		line = clsDate::getCurrentDateTimeString() + separator;
+		line += userName + separator;
+		line += password + separator;
+		line += to_string(permissions);
+		return line;
+	}
 
 
 public:
@@ -147,6 +156,16 @@ public:
 		
 	__declspec(property(get = getPermissions, put = setPermissions))int permissions;
 		
+
+	void registerLogin() {
+		fstream myFile;
+		string record = _convertLoginDataToLine();
+		myFile.open("loginRegister.txt", ios::out | ios::app);
+		if (myFile.is_open()) {
+			myFile << record << endl;
+			myFile.close();
+		}
+	}
 	static clsUser find(string userName) {
 		fstream myFile;
 		myFile.open("users.txt", ios::in);
@@ -250,6 +269,7 @@ public:
 	}
 	
 
+    
 
 };
 
