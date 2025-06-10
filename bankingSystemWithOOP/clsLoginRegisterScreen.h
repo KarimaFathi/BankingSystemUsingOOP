@@ -22,6 +22,10 @@ private:
 
 public:
     static void showLoginsDataList() {
+        if (!checkAccessRights(clsUser::enPermissions::showLoginRegister))
+        {
+            return;// this will exit the function and it will not continue
+        }
         string title = "Login Register List Screen";
         vector<vector<string>> vLoginsData = clsUser::getLoginsDataList();
         string subtitle = "(" + to_string(vLoginsData.size()) + ") Record(s) ";

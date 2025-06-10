@@ -75,6 +75,11 @@ class clsAddNewUserScreen : protected clsScreen
 			if (tolower(answer) == 'y') {
 				userPermission += clsUser::enPermissions::AdministerUsers;
 			}
+			cout << "Show  login register? (y/n)";
+			cin >> answer;
+			if (tolower(answer) == 'y') {
+				userPermission += clsUser::enPermissions::showLoginRegister;
+			}
 		}
 		return userPermission;
 	}

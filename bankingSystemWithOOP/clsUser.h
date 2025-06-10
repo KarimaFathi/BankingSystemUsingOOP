@@ -244,9 +244,7 @@ public:
 	}
 
 	enum enSaveResult { failedEmptyObject = 0, successeded = 1, failedUserExists = 2 };
-	enum enPermissions { allPermissions = -1, showAllClients = 1, addNewClient = 2, deleteClients = 4, updateClients = 8, findClients = 16, manageTransactions = 32, AdministerUsers = 64 };
-
-
+	enum enPermissions { allPermissions = -1, showAllClients = 1, addNewClient = 2, deleteClients = 4, updateClients = 8, findClients = 16, manageTransactions = 32, AdministerUsers = 64, showLoginRegister = 128};
 
 
 	enSaveResult save() {
