@@ -177,20 +177,6 @@ public:
 		return (!client.isEmpty());
 	}
 
-	//void print() {
-	//	cout << "\nClient Card:";
-	//	cout << "\n___________________";
-	//	cout << "\nFirstName   : " << firstName;
-	//	cout << "\nLastName    : " << lastName;
-	//	cout << "\nFull Name   : " << fullName();
-	//	cout << "\nEmail       : " << email;
-	//	cout << "\nPhone       : " << phone;
-	//	cout << "\nAcc. Number : " << accountNumber;
-	//	cout << "\nPassword    : " << pinCode;
-	//	cout << "\nBalance     : " << accountBalance;
-	//	cout << "\n___________________\n";
-
-	//}
 
 	enum enSaveResult {failedEmptyObject = 0, successeded = 1, failedAccountNumberExists = 2};
 
@@ -253,12 +239,23 @@ public:
 			return false;
 		}
 		else {
-			accountBalance += amount;
+			accountBalance -= amount;
 			save();
 		}
 		return true;
 	}
 
+	bool Transfer(float amount, clsBankClient& destinationClient)
+	{
+		if (amount > accountBalance)
+		{
+			return false;
+		}
+
+		this->withdraw(amount);
+		destinationClient.deposit(amount);
+		return true;
+	}
 
 };
 
