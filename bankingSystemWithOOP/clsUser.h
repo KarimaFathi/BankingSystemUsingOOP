@@ -25,6 +25,7 @@ class clsUser : public clsPerson
 		return clsUser(enMode::updatedMode, vUserData[0], vUserData[1], vUserData[2], vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6]));
 	}
 
+
 	static clsUser _getEmptyUserObject() {
 		return clsUser(enMode::emptyMode, "", "", "", "", "", "", 0);
 	}
@@ -54,6 +55,38 @@ class clsUser : public clsPerson
 		return vUsers;
 
 	}
+
+	static vector<string> _convertLineToDataObject(string line, string separator = "#//#") {
+		vector<string> vData = clsString::splitString(line, separator);
+		return vData;
+	}
+
+	static vector<vector<string>> _loadDataFromLoginFile() {
+		vector<vector<string>> vLoginsData;
+		fstream MyFile;
+		MyFile.open("loginRegister.txt", ios::in);//read Mode
+
+		if (MyFile.is_open())
+		{
+
+			string Line;
+			vector<string> lineData;
+
+
+			while (getline(MyFile, Line))
+			{
+
+				lineData = _convertLineToDataObject(Line);
+				vLoginsData.push_back(lineData);
+			}
+
+			MyFile.close();
+
+		}
+		return vLoginsData;
+	}
+
+
 
 	string _convertUserObjectToLine(clsUser user, string separator = "#//#") {
 		string line = "";
@@ -255,6 +288,11 @@ public:
 	static vector<clsUser>  getUsersList() {
 		return _loadDataFromFile();
 	}
+
+	static vector<vector<string>>  getLoginsDataList() {
+		return _loadDataFromLoginFile();
+	}
+
 
 	bool checkAccessPermission(enPermissions Permission)
 	{
