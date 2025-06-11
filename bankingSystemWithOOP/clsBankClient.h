@@ -108,19 +108,19 @@ class clsBankClient : public clsPerson
 		return _addDataLineToFile(_convertClientObjectToLine(*this));
 	}
 
-	string _convertTransferLogToLine(clsBankClient receiverClient, float amount, string separator = "#//#") {
+	string _convertTransferLogToLine(clsBankClient receiverClient, int amount, string separator = "#//#") {
 		string line;
 		line = clsDate::getCurrentDateTimeString() + separator;
 		line += accountNumber + separator;
 		line += receiverClient.accountNumber + separator;
 		line += to_string(amount) + separator;
-		line += to_string(accountBalance) + separator;
-		line += to_string(receiverClient.accountBalance) + separator;
+		line += to_string((int)accountBalance) + separator;
+		line += to_string((int)receiverClient.accountBalance) + separator;
 		line += currentUser.userName;
 		return line;
 	}
 	
-	void _registerTransferLog(clsBankClient receiverClient, float amount) {
+	void _registerTransferLog(clsBankClient receiverClient, int amount) {
 		fstream myFile;
 		string record = _convertTransferLogToLine(receiverClient, amount);
 		myFile.open("transferLog.txt", ios::out | ios::app);
@@ -250,12 +250,12 @@ public:
 		return totalBalances;
 	}
 
-	void deposit(double amount) {
+	void deposit(float amount) {
 		accountBalance += amount;
 		save();
 	}
 
-	bool withdraw(double amount) {
+	bool withdraw(float amount) {
 		if (amount > accountBalance) {
 			return false;
 		}
@@ -275,12 +275,9 @@ public:
 
 		this->withdraw(amount);
 		destinationClient.deposit(amount);
-		_registerTransferLog(destinationClient, amount);
+		_registerTransferLog(destinationClient, (int)amount);
 		return true;
 	}
-
-
-
 
 };
 

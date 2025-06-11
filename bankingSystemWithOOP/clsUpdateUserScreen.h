@@ -135,7 +135,6 @@ public:
         else {
             cout << "\nNo updates were applied.";
         }
-
     }
 };
 

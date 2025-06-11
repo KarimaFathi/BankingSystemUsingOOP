@@ -145,6 +145,7 @@
     <ClCompile Include="clsManageUsersScreen.cpp" />
     <ClCompile Include="clsPerson.cpp" />
     <ClCompile Include="clsScreen.cpp" />
+    <ClCompile Include="clsShowTransferLogScreen.cpp" />
     <ClCompile Include="clsShowTransferScreen.cpp" />
     <ClCompile Include="clsString.cpp" />
     <ClCompile Include="clsTotalBalancesScreen.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="clsManageUsersScreen.h" />
     <ClInclude Include="clsPerson.h" />
     <ClInclude Include="clsScreen.h" />
+    <ClInclude Include="clsShowTransferLogScreen.h" />
     <ClInclude Include="clsShowTransferScreen.h" />
     <ClInclude Include="clsString.h" />
     <ClInclude Include="clsTotalBalancesScreen.h" />

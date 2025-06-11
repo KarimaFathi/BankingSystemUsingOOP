@@ -86,6 +86,31 @@ class clsUser : public clsPerson
 		return vLoginsData;
 	}
 
+	static vector<vector<string>> _loadDataFromTransferLogFile() {
+		vector<vector<string>> vTransferLogsData;
+		fstream MyFile;
+		MyFile.open("transferLog.txt", ios::in);//read Mode
+
+		if (MyFile.is_open())
+		{
+
+			string Line;
+			vector<string> lineData;
+
+
+			while (getline(MyFile, Line))
+			{
+
+				lineData = _convertLineToDataObject(Line);
+				vTransferLogsData.push_back(lineData);
+			}
+
+			MyFile.close();
+
+		}
+		return vTransferLogsData;
+	}
+
 
 
 	string _convertUserObjectToLine(clsUser user, string separator = "#//#") {
@@ -291,6 +316,10 @@ public:
 		return _loadDataFromLoginFile();
 	}
 
+
+	static vector<vector<string>>  getTransferLogDataList() {
+		return _loadDataFromTransferLogFile();
+	}
 
 	bool checkAccessPermission(enPermissions Permission)
 	{
