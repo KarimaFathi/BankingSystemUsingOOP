@@ -5,6 +5,7 @@
 #include<string>
 #include "clsPerson.h"
 #include "clsString.h"
+#include "global.h"
 using namespace std;
 
 
@@ -107,7 +108,27 @@ class clsBankClient : public clsPerson
 		return _addDataLineToFile(_convertClientObjectToLine(*this));
 	}
 
-
+	string _convertTransferLogToLine(clsBankClient receiverClient, float amount, string separator = "#//#") {
+		string line;
+		line = clsDate::getCurrentDateTimeString() + separator;
+		line += accountNumber + separator;
+		line += receiverClient.accountNumber + separator;
+		line += to_string(amount) + separator;
+		line += to_string(accountBalance) + separator;
+		line += to_string(receiverClient.accountBalance) + separator;
+		line += currentUser.userName;
+		return line;
+	}
+	
+	void _registerTransferLog(clsBankClient receiverClient, float amount) {
+		fstream myFile;
+		string record = _convertTransferLogToLine(receiverClient, amount);
+		myFile.open("transferLog.txt", ios::out | ios::app);
+		if (myFile.is_open()) {
+			myFile << record << endl;
+			myFile.close();
+		}
+	}
 
 public:
 	clsBankClient(enMode mode,string firstName, string lastName, string email, string phone, string accountNumber, string pinCode, float accountBalance) : clsPerson(firstName, lastName, email, phone) {
@@ -254,8 +275,12 @@ public:
 
 		this->withdraw(amount);
 		destinationClient.deposit(amount);
+		_registerTransferLog(destinationClient, amount);
 		return true;
 	}
+
+
+
 
 };
 
