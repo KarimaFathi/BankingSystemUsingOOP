@@ -6,6 +6,7 @@
 #include "clsPerson.h"
 #include "clsString.h"
 #include "clsDate.h"
+#include "clsUtilities.h"
 using namespace std;
 
 
@@ -22,7 +23,7 @@ class clsUser : public clsPerson
 
 	static clsUser _convertLineToUserObject(string line, string separator = "#//#") {
 		vector<string> vUserData = clsString::splitString(line, separator);
-		return clsUser(enMode::updatedMode, vUserData[0], vUserData[1], vUserData[2], vUserData[3], vUserData[4], vUserData[5], stoi(vUserData[6]));
+		return clsUser(enMode::updatedMode, vUserData[0], vUserData[1], vUserData[2], vUserData[3], vUserData[4], ::clsUtilities::_decryptWord(vUserData[5]), stoi(vUserData[6]));
 	}
 
 
@@ -56,8 +57,11 @@ class clsUser : public clsPerson
 
 	}
 
+	
+
 	static vector<string> _convertLineToDataObject(string line, string separator = "#//#") {
 		vector<string> vData = clsString::splitString(line, separator);
+		vData[2] = ::clsUtilities::_decryptWord(vData[2]);
 		return vData;
 	}
 
@@ -120,7 +124,7 @@ class clsUser : public clsPerson
 		line += user.email + separator;
 		line += user.phone + separator;
 		line += user.userName + separator;
-		line += user.password + separator;
+		line += clsUtilities::_encryptWord(user.password) + separator;
 		line += to_string(user.permissions);
 		return line;
 
@@ -169,7 +173,7 @@ class clsUser : public clsPerson
 		string line;
 		line = clsDate::getCurrentDateTimeString() + separator;
 		line += userName + separator;
-		line += password + separator;
+		line += ::clsUtilities::_encryptWord(password) + separator;
 		line += to_string(permissions);
 		return line;
 	}

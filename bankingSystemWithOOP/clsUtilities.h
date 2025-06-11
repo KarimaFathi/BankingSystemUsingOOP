@@ -61,6 +61,22 @@ public:
         return Key;
     }
 
+    static string _encryptWord(string word, int encryptionKey=2) {
+        string wordAfterEnc = "";
+        for (int i = 0; i < word.length(); i++) {
+            wordAfterEnc += char(int(word[i]) + encryptionKey);
+        }
+        return wordAfterEnc;
+    }
+
+    static string _decryptWord(string word, int decryptionKey=2) {
+        string wordAfterDec = "";
+        for (int i = 0; i < word.length(); i++) {
+            wordAfterDec += char(int(word[i]) - decryptionKey);
+        }
+        return wordAfterDec;
+    }
+
 
     static void generateKeys(int numberOfKeys, enCharType charType) {
         string arrayKeys[100];
