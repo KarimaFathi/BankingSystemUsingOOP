@@ -13,12 +13,12 @@ class clsScreen
 {
 protected :
 	static void _drawScreenHeader(string title, string subTitle = "") {
-		cout << "\t\t\t\t\t______________________________________\n\n";
+		cout << "\t\t\t\t\t___________________________________________________\n\n";
 		cout << "\t\t\t\t\t\t   " << title << "\n";
 		if (subTitle != "") {
 			cout << "\t\t\t\t\t\t     " << subTitle << "\n";
 		}
-		cout << "\t\t\t\t\t______________________________________\n\n";
+		cout << "\t\t\t\t\t___________________________________________________\n\n";
 
         cout << "\t\t\t\t\t User : " << currentUser.userName << endl;
         cout << "\t\t\t\t\t Date : ";
