@@ -3,6 +3,8 @@
 #include<iomanip>
 #include "clsScreen.h"
 #include "clsInputValidate.h"
+#include "clsListCurrenciesScreen.h"
+#include "clsFindCurrencyScreen.h"
 using namespace std;
 
 
@@ -25,10 +27,10 @@ private:
 		showCurrencyExchangeMenu();
 	}
 	static void  _showFindCurrencyScreen() {
-		
+		clsFindCurrencyScreen::showFindCurrency();
 	}
 	static void _showListCurrenciesScreen() {
-	
+		clsListCurrenciesScreen::showCurrenciesList();
 	}
 	static void _showUpdateRateScreen() {
 	

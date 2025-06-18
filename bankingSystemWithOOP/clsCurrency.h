@@ -101,6 +101,8 @@ public:
         _rate = rate;
     }
 
+    clsCurrency() {}
+
     bool isEmpty() {
         return (_mode == enMode::emptyMode);
     }
@@ -116,6 +118,10 @@ public:
 
     string getCurrencyCode() {
         return _currencyCode;
+    }
+
+    float getCurrencyRate() {
+        return _rate;
     }
 
     void updateRate(float newRate) {
@@ -158,10 +164,16 @@ public:
         return _getEmptyCurrencyObject();
     }
 
-    static bool isCurrencyExists(string currencyCode) {
+    static bool isCurrencyExistsByCode(string currencyCode) {
         clsCurrency currency = findByCurrencyCode(currencyCode);
         return (!currency.isEmpty());
     }
+
+      static bool isCurrencyExistsByCountry(string countryName) {
+        clsCurrency currency = findByCountryName(countryName);
+        return (!currency.isEmpty());
+    }
+
 
     static vector<clsCurrency> getCurrenciesList() {
         return _loadDataFromFile();

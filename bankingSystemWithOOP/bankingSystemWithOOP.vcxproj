@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -138,8 +138,10 @@
     <ClCompile Include="clsDeleteUserScreen.cpp" />
     <ClCompile Include="clsDepositScreen.cpp" />
     <ClCompile Include="clsFindClientScreen.cpp" />
+    <ClCompile Include="clsFindCurrencyScreen.cpp" />
     <ClCompile Include="clsFindUserScreen.cpp" />
     <ClCompile Include="clsInputValidate.cpp" />
+    <ClCompile Include="clsListCurrenciesScreen.cpp" />
     <ClCompile Include="clsListUserScreen.cpp" />
     <ClCompile Include="clsLoginRegisterScreen.cpp" />
     <ClCompile Include="clsLoginScreen.cpp" />
@@ -171,8 +173,10 @@
     <ClInclude Include="clsDeleteUserScreen.h" />
     <ClInclude Include="clsDepositScreen.h" />
     <ClInclude Include="clsFindClientScreen.h" />
+    <ClInclude Include="clsFindCurrencyScreen.h" />
     <ClInclude Include="clsFindUserScreen.h" />
     <ClInclude Include="clsInputValidate.h" />
+    <ClInclude Include="clsListCurrenciesScreen.h" />
     <ClInclude Include="clsListUserScreen.h" />
     <ClInclude Include="clsLoginRegisterScreen.h" />
     <ClInclude Include="clsLoginScreen.h" />
