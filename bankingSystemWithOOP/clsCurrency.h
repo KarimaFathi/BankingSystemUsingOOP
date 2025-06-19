@@ -101,7 +101,6 @@ public:
         _rate = rate;
     }
 
-    clsCurrency() {}
 
     bool isEmpty() {
         return (_mode == enMode::emptyMode);
@@ -177,6 +176,10 @@ public:
 
     static vector<clsCurrency> getCurrenciesList() {
         return _loadDataFromFile();
+    }
+
+    float exchangeCurrency(float amount, float currency2Rate) {
+        return (amount / getCurrencyRate()) * currency2Rate;
     }
 };
 

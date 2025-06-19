@@ -47,20 +47,19 @@ public:
     static void showFindCurrency() {
         short choice;
         string currencyCode, currencyCountry;
-        clsCurrency currency;
         _drawScreenHeader("\tFind Currency Screen");
         cout << "\nFind By : [1] Code or [2] Country ? ";
         choice = readChoice();
         if (choice == 1) {
             cout << "\nPlease enter currency code : ";
             cin >> currencyCode;
-            currency = clsCurrency::findByCurrencyCode(currencyCode);
+            clsCurrency currency = clsCurrency::findByCurrencyCode(currencyCode);
             showResults(currency);
         }
         else {
             cout << "\nPlease enter the country : ";
             cin >> currencyCountry;
-            currency = clsCurrency::findByCountryName(currencyCountry);
+            clsCurrency currency = clsCurrency::findByCountryName(currencyCountry);
             showResults(currency);
         }
     }
