@@ -12,4 +12,31 @@ This project is a fully featured **console-based banking system** implemented in
 
 🎛 Modular design for easier scalability
 
+## 🧩 Features
 
+### ✅ Core Banking Features
+- **Client Management**
+  - Add, update, delete, find clients
+  - View full client list
+- **Transactions**
+  - Deposit and withdraw funds
+  - Transfer between clients
+  - View total balances
+- **Currency Tools**
+  - Convert between currencies
+  - Update exchange rates
+  - Find specific currency details
+
+### 👥 User Management
+- Login system with credential check
+- Role-based access control (admin vs limited user)
+- Lock system after **3 failed login attempts**
+- Passwords are **encrypted** when stored in `users.txt`
+- Track login sessions
+- Add/update/delete users
+- View user details and list
+
+### 📊 Logs and Tracking
+- Login logs stored in `loginRegister.txt`
+- Transfer history in `transferLog.txt`
+- All data is persistently stored in `.txt` files
