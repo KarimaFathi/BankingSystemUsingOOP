@@ -40,3 +40,19 @@ This project is a fully featured **console-based banking system** implemented in
 - Login logs stored in `loginRegister.txt`
 - Transfer history in `transferLog.txt`
 - All data is persistently stored in `.txt` files
+
+
+## 🧱 Project Architecture
+
+### 🔐 Key Files
+
+| File / Folder                 | Description |
+|------------------------------|-------------|
+| `clsBankClient.*`            | Client logic |
+| `clsUser.*`                  | User logic + permissions |
+| `clsScreen.*` + sub-classes  | UI layers for each screen |
+| `clsCurrency.*`              | Currency rates and operations |
+| `clsTransactionsScreen.*`    | Deposit, Withdraw, Transfer |
+| `global.*`                   | Shared values and helpers |
+| `*.txt` files                | Client/user/transaction storage |
+
